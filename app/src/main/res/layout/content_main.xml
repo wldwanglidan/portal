@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tempus.portal.ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivHomeBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingRight="24dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibtMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_menu"
+            android:background="@null"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_tempus"
+           />
+    </RelativeLayout>
+
+    <com.lishide.recyclerview.scroll.ScrollRecyclerView
+        android:id="@+id/rvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="50dp"
+        android:paddingLeft="10dp"
+        android:clipToPadding="false"/>
+</RelativeLayout>

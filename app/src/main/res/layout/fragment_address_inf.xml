@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout style="@style/whiteLiStyle"
+        android:id="@+id/llAddBtn">
+        <Button
+            android:id="@+id/btnAddAddress"
+            android:text="新增地址"
+            style="@style/addInfBtnStyle"/>
+    </LinearLayout>
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_header"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_footer"/>
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+</LinearLayout>

@@ -1,0 +1,272 @@
+apply plugin: 'com.android.application' // module 类型 appllication -> app library -> 代表android library 或者 java library
+//apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: 'android-apt'
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+configurations.all {
+
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.1'
+            }
+        }
+    }
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+    // 签名配置
+    signingConfigs {
+        debug {
+            keyAlias 'tempusportal'
+            keyPassword 'tempusportal'
+            storeFile file('tempusportal.jks')
+            storePassword 'tempusportal'
+        }
+        tempustourism {
+            keyAlias 'tempusportal'
+            keyPassword 'tempusportal'
+            storeFile file('tempusportal.jks')
+            storePassword 'tempusportal'
+            //v2SigningEnabled false
+        }
+        //        defaultConfig {
+        //            multiDexEnabled true
+        //            multiDexKeepProguard file('multiDexKeep.pro')
+        //            multiDexKeepFile file('multiDexKeep.txt')
+        //        }
+        defaultConfig {
+            renderscriptTargetApi 25
+            //must match target sdk and build tools, 23+
+            renderscriptSupportModeEnabled true
+        }
+    }
+    compileSdkVersion 27 //SDK编译版本
+    buildToolsVersion '27.0.3' //构建工具版本 对应buildTool
+
+    defaultConfig {
+        applicationId "com.tempus.portal" //配置包名
+        minSdkVersion 18 // 最小支持sdk版本
+        targetSdkVersion 27 // 目标sdk版本
+        versionCode 4 //版本号
+        versionName "1.3" //版本名称
+        flavorDimensions "versionCode"
+        // dex突破65535的限制
+        multiDexEnabled true
+        //默认是umeng的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    // 这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    //    dexOptions {
+    //        incremental true
+    //        javaMaxHeapSize "4g"
+    //        //关闭预编译
+    //        preDexLibraries = false
+    //    } Studio 2.2不需要dex配置
+    //打包忽略掉第三方jar相同的文件
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        //表示构建类型 一般有release debug 两种
+        debug {
+            //显示log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            //移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            //release类型
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            //是否使用混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            // 启用混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            signingConfig signingConfigs.tempustourism
+        }
+    }
+    productFlavors {
+        //多渠道打包
+        wandoujia {}
+        baidu {}
+        xiaomi {}
+        tencent {}
+        jifen {}
+        tempusportal {}
+        m360 {}
+        huawei {}
+        anzhuo {}
+        m91 {}
+        oppo {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+}
+android {
+    //use legacy for android 6.0
+    useLibrary 'org.apache.http.legacy'
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //即添加所有在libs文件夹中的jar
+
+    //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2',
+
+    //            {
+
+    //                exclude group: 'com.android.support',
+
+    //                        module: 'support-annotations'
+
+    //            })
+
+    //GSON
+
+    //Glide Transformations
+
+    // Retrofit网络请求
+
+    // Rx
+
+    //Rxpermissions
+
+    //Rxpreferences
+
+    // Glide图片框架
+
+    //implementation 'com.github.bumptech.glide:glide:4.0.0'
+
+    //Butterknife
+
+    //multidex
+
+    //友盟统计
+
+    //Eventbus
+
+    //Fragmentation
+
+    //SwipeBackHelper
+
+    //    implementation files(
+
+    //            'libs/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212.jar')
+
+    //1. 云客服SDK
+
+    // implementation(name: 'CloudFaceVerifySdk-proRelease-v1.3.6-3cb4c80', ext: 'aar')
+
+    //网络请求
+
+    //SwipeToLoadLayout
+
+    //    implementation 'com.jakewharton:butterknife:8.8.1'
+
+    //    annotationProcessor 'com.jakewharton:butterknife-implementationr:8.8.1'
+
+    //ConvenientBanner
+    implementation files('libs/umeng_social_api.jar')
+    implementation files(
+            'libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar')
+    implementation files('libs/SocialSDK_QQ_Simplify.jar')
+    implementation files('libs/SocialSDK_WeiXin_Full.jar')
+    implementation files('libs/umeng_social_net.jar')
+    implementation files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    //    implementation files('libs/umeng_social_tool.jar')
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:support-v4:27.+'
+    implementation 'com.android.support:design:27.+'
+    implementation 'com.android.support:recyclerview-v7:27.+'
+    implementation 'com.android.support:cardview-v7:27.+'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'com.jaeger.statusbaruitl:library:1.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    implementation 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'me.yokeyword:fragmentation:1.1.3'
+    implementation 'com.jude:swipebackhelper:3.1.2'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.github.rubensousa:gravitysnaphelper:1.2'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
+    implementation 'com.github.lishide:ScrollRecyclerView:v1.0.0'
+    implementation 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+    implementation 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+
+    //    implementation 'com.jakewharton:butterknife:8.5.1'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+    implementation 'com.contrarywind:Android-PickerView:3.2.6'
+    implementation 'com.camnter.easyrecyclerview:easyrecyclerview:1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //    apt 'com.jakewharton:butterknife-implementationr:8.5.1'
+
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tempus.portal.view.widget.edit.EditLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <FrameLayout
+        android:id="@+id/fl_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="134dp"
+            android:layout_height="86dp"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:text="阿斯顿"
+                android:textColor="@color/textTitleColor"/>
+
+            <TextView
+                android:id="@+id/tvUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="@dimen/micro_text"
+                android:text="www.asd.com"
+                android:textColor="@color/textGrayColor"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="@dimen/micro_text"
+                android:text="2017-10-01"
+                android:textColor="@color/textGrayColor"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:background="@color/divider"/>-->
+    <!--</LinearLayout>-->
+
+    <FrameLayout
+        android:id="@+id/fl_pre_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ibtSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:paddingLeft="15dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/cb_cancel_collection_f"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</com.tempus.portal.view.widget.edit.EditLayout>

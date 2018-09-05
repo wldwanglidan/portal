@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/White</color>
+    <color name="colorPrimaryDark">@color/White</color>
+    <color name="colorAccent">@color/btnBgGo</color>
+    <color name="Orange">#ff5722</color>
+    <color name="DeepPurple">#673AB7</color>
+    <color name="DeepPurple900">#311B92</color>
+    <color name="White">#fff</color>
+    <color name="Black">#000000</color>
+    <color name="Gray">#888888</color>
+    <color name="Gray100">#dddddd</color>
+    <color name="Gray600">#999999</color>
+    <color name="base_bg">#f2f2f2</color>
+    <color name="base_msg_color">#ff999999</color>
+    <color name="cpb_default_color">#33b5e5</color>
+    <dimen name="cpb_default_stroke_width">4dp</dimen>
+    <integer name="cpb_default_min_sweep_angle">20</integer>
+    <integer name="cpb_default_max_sweep_angle">300</integer>
+    <item name="cpb_default_sweep_speed"
+        format="float"
+        type="string">1
+    </item>
+    <item name="cpb_default_rotation_speed"
+        format="float"
+        type="string">1
+    </item>
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+    <color name="textComInfBgColor">#4EA2FF</color>
+
+    <color name="bottom_bar_bg">#F9F9F9</color>
+    <color name="textJourneyBgColor">#ff779cf4</color>
+    <color name="textNickNameColor">#494949</color>
+    <color name="divider">#eaeaea</color>
+    <color name="line">#979797</color>
+    <color name="line1">#d5d5d5</color>
+    <color name="line2">#FFF0F1F5</color>
+    <color name="line3">#D6D6D6</color>
+    <color name="line4">#E2E2E2</color>
+    <color name="line5">#F2F2F2</color>
+    <!--20%-->
+    <color name="transLine">#33979797</color>
+    <color name="btnBgGo">#4EA2FF</color>
+    <!--15%-->
+    <color name="transFragmentBg">#25D8D8D8</color>
+    <!--30%-->
+    <color name="transLine1">#4c979797</color>
+    <color name="transContentColor">#4c2D2D2D</color>
+    <color name="transHintTextColor">#4c494949</color>
+    <!--40-->
+    <color name="transLine2">#65979797</color>
+    <color name="transDark">#65000000</color>
+
+    <color name="textDarkGrayColor">#959595</color>
+    <color name="textDialogColor">#030303</color>
+    <color name="textGrayColor">#a8a8a8</color>
+    <color name="textContentColor">#2D2D2D</color>
+    <color name="textTitleColor">#2e2e2e</color>
+    <color name="textLoginColor">#7AA1CB</color>
+    <color name="textRedColor">#FB704B</color>
+    <color name="transTextRightColor">#d14EA2FF</color>
+    <color name="textRightColor">#4EA2FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="red_round">#ff724b</color>
+    <color name="personalCenterBg">#F2F2F2</color>
+    <color name="personalCenter_TextLeftColor">#2D2D2D</color>
+    <color name="personalCenter_TextRightColor">#494949</color>
+    <color name="switchColor">#44DB5E</color>
+    <color name="bgTran">#7fffffff</color>
+</resources>

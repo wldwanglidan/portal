@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <!--android:background="@color/transFragmentBg"-->
+    <TextView
+        android:id="@+id/tvEmptyContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:drawablePadding="33dp"
+        android:drawableTop="@drawable/bg_empty_collection"
+        android:gravity="center"
+        android:textColor="@color/transDark"
+        android:textSize="@dimen/small_text1"
+        />
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textColor="@color/transContentColor"
+        android:textSize="@dimen/micro_text"
+        />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_marginTop="@dimen/dp_45"
+        android:text="新增旅客"
+        android:background="@drawable/btn_addinfo_shape2"
+        style="@style/addInfBtnStyle"/>
+</LinearLayout>

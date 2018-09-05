@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_toolbar"/>
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="姓名"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetName"
+            android:hint="请输入中文姓名"
+            style="@style/nameCetStyle"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="手机号码"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetMobile"
+            android:hint="请输入手机号"
+            style="@style/mobileCetStyle"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="电子邮箱"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:background="@null"
+            android:hint="如wangxiaolei@163.com"
+            android:maxLength="60"
+            android:maxLines="1"
+            android:textColor="@color/textTitleColor"
+            android:textColorHint="@color/textGrayColor"
+            android:textSize="@dimen/personal_center_textSize"/>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <RelativeLayout style="@style/bottomRlStyle">
+
+        <TextView
+            android:id="@+id/tvContactDefault"
+            android:text="设为本人信息"
+            style="@style/bottomTvStyle"/>
+
+        <CheckBox
+            android:id="@+id/cbDefault"
+            android:layout_toLeftOf="@id/tvContactDefault"
+            style="@style/bottomCbStyle"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

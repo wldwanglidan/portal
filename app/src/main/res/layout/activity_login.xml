@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/ivLoginBg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="fitXY"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ibtClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="15dp"
+                android:src="@drawable/ibt_close"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/big_small_text"
+                android:textColor="@color/White"
+                android:layout_centerInParent="true"
+                android:text="登 录"/>
+        </RelativeLayout>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="true"
+            android:layout_marginTop="113dp"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:hint="@string/hint_phone"
+            android:textColorHint="@color/textGrayColor"
+            android:background="@null"
+            android:textColor="@color/White"
+            android:textSize="@dimen/small_text"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@color/textGrayColor"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <com.tempus.portal.view.widget.ClearEditText
+                android:id="@+id/etVerificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:hint="@string/hint_verification_code"
+                android:textColorHint="@color/textGrayColor"
+                android:background="@null"
+                android:textColor="@color/White"
+                android:textSize="@dimen/small_text"
+                android:cursorVisible="true"
+                android:focusableInTouchMode="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="15dp"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@color/White"/>
+
+            <Button
+                android:id="@+id/btnSendCode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/White"
+                android:textSize="@dimen/small_text"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@color/textGrayColor"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_gravity="center"
+            android:textColor="@color/textLoginColor"
+            android:text="登录"
+            android:textSize="@dimen/big_small_text"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/btn_login_bg"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="102dp"
+                    android:layout_height="1px"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@color/textGrayColor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/micro_text"
+                    android:textColor="@color/textGrayColor"
+                    android:text="第三方登录"
+                    android:id="@+id/textView"/>
+
+                <View
+                    android:layout_width="102dp"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@color/textGrayColor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="21dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ibtWechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ibt_wechat"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <ImageButton
+                    android:id="@+id/ibtQq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/ibt_qq"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

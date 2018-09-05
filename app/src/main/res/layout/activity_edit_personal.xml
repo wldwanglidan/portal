@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/personalCenterBg">
+    <include
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical"
+        android:background="@color/White">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/pllAvatar"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="头像"
+                android:layout_weight="1"
+                android:textColor="@color/personalCenter_TextLeftColor"
+                android:textSize="@dimen/small_text"/>
+
+            <ImageView
+                android:id="@id/ivUserHead"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_right_gray_arrow"/>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sp_1"
+            android:background="@color/transLine"></View>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/pllNickName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:layout_weight="1"
+                android:textColor="@color/personalCenter_TextLeftColor"
+                android:textSize="@dimen/personal_center_textSize"/>
+
+            <TextView
+                android:id="@+id/tvNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1382405"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/personalCenter_TextRightColor"
+                android:textSize="@dimen/personal_center_textSize"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_right_gray_arrow"/>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:showDividers="middle|end"
+        android:dividerPadding="1px"
+        android:orientation="vertical"
+        android:background="@color/White">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/pllPhone"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号码"
+                android:layout_weight="1"
+                android:textColor="@color/personalCenter_TextLeftColor"
+                android:textSize="@dimen/small_text"/>
+
+            <TextView
+                android:id="@+id/tvUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="138****2405"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/personalCenter_TextRightColor"
+                android:textSize="@dimen/personal_center_textSize"/>
+
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sp_1"
+            android:background="@color/transLine"
+            ></View>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:id="@+id/pllUserLevel"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员等级"
+                android:layout_weight="1"
+                android:textColor="@color/personalCenter_TextLeftColor"
+                android:textSize="@dimen/personal_center_textSize"/>
+
+            <TextView
+                android:id="@+id/tvUserLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T1"
+                android:layout_marginRight="24dp"
+                android:textColor="@color/personalCenter_TextRightColor"
+                android:textSize="@dimen/personal_center_textSize"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_right_gray_arrow"/>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnOutLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_btn_out_login"
+        android:text="退出"
+        android:textColor="@color/White"
+        android:textSize="@dimen/big_small_text"/>
+
+</LinearLayout>
+

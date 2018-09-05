@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_entry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+       />
+
+    <com.tempus.portal.view.widget.AdCountView
+        android:id="@+id/tvCountdown"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+    <!--app:text="跳过"-->
+    <!--app:textColor="@color/textTitleColor"-->
+    <!--app:textSize="@dimen/small_text"-->
+    <!--app:backgroundColor="@null"-->
+    <!--app:outRingColor="@color/btnBg"-->
+</RelativeLayout>

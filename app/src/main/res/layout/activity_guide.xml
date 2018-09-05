@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/White"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/guide_ll_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="34dp"
+        android:gravity="center_horizontal"></LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/btnGo"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:paddingTop="13dp"-->
+    <!--android:paddingBottom="13dp"-->
+    <!--android:text="立即体验"-->
+    <!--android:textColor="@color/bgBtnCoupon"-->
+    <!--android:textSize="@dimen/small_text"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@drawable/bg_btn_experience_immediately"-->
+    <!--android:layout_marginBottom="40dp"/>-->
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="立即体验"
+        android:paddingBottom="9dp"
+        android:paddingLeft="47dp"
+        android:paddingTop="9dp"
+        android:paddingRight="47dp"
+        android:textSize="@dimen/small_text"
+        android:textColor="@color/White"
+        android:background="@drawable/bg_btn_go"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="81dp"/>
+
+    <Button
+        android:id="@+id/btnJumpOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="跳过"
+        android:textColor="#5db7fc"
+        android:textSize="@dimen/small_text"
+        android:background="@drawable/bg_btn_jump"/>
+</RelativeLayout>

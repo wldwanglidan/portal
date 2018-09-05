@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_addPassage"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_toolbar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="中文姓名"
+                    style="@style/leftTVStyle"/>
+
+                <com.tempus.portal.view.widget.ClearEditText
+                    android:id="@+id/cetChinaName"
+                    android:hint="请输入完整中文姓名，如张三"
+                    style="@style/nameCetStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/ThinLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="英文姓"
+                    android:maxLength="10"
+                    style="@style/leftTVStyle"/>
+
+                <com.tempus.portal.view.widget.ClearEditText
+                    android:id="@+id/cetFirstName"
+                    android:hint="如ZHANG"
+                    android:maxLength="50"
+                    style="@style/cetEnglishNameStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/ThinLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="英文名"
+                    style="@style/leftTVStyle"/>
+
+                <com.tempus.portal.view.widget.ClearEditText
+                    android:id="@+id/cetSecondName"
+                    android:maxLength="50"
+                    android:hint="如SAN"
+                    style="@style/cetEnglishNameStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/FatLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    app:layout_widthPercent="32%">
+
+                    <TextView
+                        android:id="@+id/tvPassport"
+                        android:text="护照"
+                        style="@style/leftTVStyle"
+                        android:drawableRight="@drawable/ic_bottom_arrow"/>
+                </LinearLayout>
+
+                <com.tempus.portal.view.widget.ClearEditText
+                    android:id="@+id/cetPassport"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+                    android:inputType="textUri|textMultiLine"
+                    android:background="@null"
+                    android:hint="请输入证件号码"
+                    android:maxLines="1"
+                    android:textColor="@color/textTitleColor"
+                    android:textColorHint="@color/textGrayColor"
+                    android:textSize="@dimen/small_text"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/ThinLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/llBirthday"
+                style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="出生日期"
+                    style="@style/leftTVStyle"/>/>
+
+                <TextView
+                    android:id="@+id/tvBirthday"
+                    android:hint="请选择"
+                    style="@style/ChooseTvStyle"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/ThinLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:gravity="center_vertical"
+                style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="性别"
+                    style="@style/leftTVStyle"/>
+
+                <CheckBox
+                    android:id="@+id/cbMan"
+                    android:background="@drawable/btn_male"
+                    android:checked="false"
+                    android:text="男"
+                    style="@style/sexCbStyle"/>
+
+                <CheckBox
+                    android:id="@+id/cbWoman"
+                    android:background="@drawable/btn_female"
+                    android:checked="true"
+                    android:text="女"
+                    style="@style/sexCbStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/ThinLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/llNationality"
+                style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="国籍"
+                    style="@style/leftTVStyle"/>
+
+                <TextView
+                    android:id="@+id/tvNationality"
+                    android:hint="请选择"
+                    style="@style/ChooseTvStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/ThinLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/llValidPeriod"
+                style="@style/PllStyle">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="有效期"
+                    style="@style/leftTVStyle"/>
+
+                <TextView
+                    android:id="@+id/tvValidPeriod"
+                    android:hint="请选择"
+                    style="@style/ChooseTvStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/FatLine"></View>
+
+            <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle"
+                android:id="@+id/pllMobile">
+
+                <TextView
+                    app:layout_widthPercent="32%"
+                    android:text="手机号码"
+                    style="@style/leftTVStyle"/>
+
+                <com.tempus.portal.view.widget.ClearEditText
+                    android:id="@+id/cetMobile"
+                    android:hint="请填写手机号(选填项)"
+                    style="@style/mobileCetStyle"/>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View style="@style/FatLine"></View>
+
+            <RelativeLayout
+                style="@style/bottomRlStyle"
+                android:id="@+id/rlBottom">
+
+                <TextView
+                    android:id="@+id/tvContactDefault"
+                    android:text="设为本人信息"
+                    style="@style/bottomTvStyle"/>
+
+                <CheckBox
+                    android:id="@+id/cbDefault"
+                    android:layout_toLeftOf="@id/tvContactDefault"
+                    style="@style/bottomCbStyle"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

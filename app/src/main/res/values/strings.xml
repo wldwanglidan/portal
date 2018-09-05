@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">腾邦生活</string>
+
+    <string name="error_unknown">系统繁忙</string>
+    <string name="request_timeout">网络连接超时，请重试</string>
+    <string name="no_network">当前网络不可用，请检查网络后重试</string>
+    <string name="error_gson_parse_error">Json 解析异常</string>
+    <string name="error_system_error">系统繁忙</string>
+    <string name="error_encrypt">加解密失败</string>
+    <string name="error_login_timeout">登录失效，请重新登录</string>
+    <!-- 版本更新 -->
+    <string name="update_querying">检查版本更新</string>
+    <string name="update_waiting">更新中，请稍候…</string>
+    <string name="update">软件升级</string>
+    <string name="has_load_success">已经下载好啦，是否马上安装</string>
+    <string name="update_updateverify">新版本: %1$s\n%2$s</string>
+    <string name="update_do">立即更新</string>
+    <string name="update_err_noupdateinfo">网络出错</string>
+    <string name="update_noneedupdate">当前即为最新版本</string>
+    <string name="update_noneedupdate_confirm">朕知道了</string>
+    <string name="setting_update">检查更新</string>
+    <string name="download_waiting">腾邦生活——正在下载…</string>
+    <string name="download_err_replay">下载失败，请重新下载</string>
+    <string name="cancel">稍后更新</string>
+    <string name="install_right_now">立即安装</string>
+    <string name="loading">数据加载中,请稍候&#8230;</string>
+    <string name="is_downloading">正在下载中，请稍后</string>
+    <string name="double_click_exit">再按一次退出</string>
+
+    <!-- 暂无数据相关描述 -->
+    <string name="empty_string_default">暂无数据~</string>
+    <string name="common_loading_message">Loading...</string>
+    <string name="common_loading_message1">加载中...</string>
+    <string name="common_empty_msg">糟糕，无法解析数据\ n请点击屏幕，然后重试〜</string>
+    <string name="common_error_msg">服务器开小差了,点击屏幕刷新一下吧</string>
+    <string name="common_no_network_msg">网络不稳定</string>
+    <string name="perfection_tips">功能完善,敬请期待\nfunction improving and coming soon</string>
+
+    <string name="load_ing">加载中...</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="submitFeedBackIng">提交反馈中...</string>
+    <string name="submitFeedBackSuccess">您的意见反馈已提交成功!</string>
+    <!--登录/注册-->
+    <string name="hint_phone">请输入手机号</string>
+    <string name="hint_verification_code">请输入验证码</string>
+    <string name="phone_cannot_be_empty">请输入正确的手机号!</string>
+    <string name="verification_code_cannot_be_empty">请输入验证码!</string>
+    <string name="loginIng">登录中...</string>
+    <string name="loginSuccess">登录成功!</string>
+    <string name="bindPhoneIng">绑定中...</string>
+    <string name="bindPhoneSuccess">绑定成功!</string>
+    <string name="sendVerificationCodeSuccess">发送验证码成功!</string>
+    <string name="resend_verification_code">重新获取</string>
+    <string name="re_verification">%1$ss后重发</string>
+
+    <!--常用信息-->
+    <string name="notChinaName">请输入中文姓名</string>
+    <string name="notNickName">请输入昵称</string>
+    <string name="notChangeNickName">昵称没有改变</string>
+    <string name="notRightNickName">昵称不符合规则，请重新输入</string>
+    <string name="notMobile">请输入手机号</string>
+    <string name="notRightMobile">请输入正确的手机号</string>
+    <string name="notRightChinaName">中文姓名必须全部是汉字</string>
+    <string name="notRightZip">邮编不正确</string>
+    <string name="notRightAddress">地址不能少于5个字</string>
+    <string name="notRightAddress1">输入的地址不合法</string>
+    <string name="notEmail">请输入电子邮箱</string>
+    <string name="notRightEmail">请输入正确的电子邮箱</string>
+    <string name="saveIng">保存中...</string>
+    <string name="addSuccess">添加成功</string>
+    <string name="deleteIng">删除...</string>
+    <string name="deleteSuccess">删除成功</string>
+    <string name="notIDNum">请输入证件号码</string>
+    <string name="notIDNum1">身份证号码不合格</string>
+    <string name="notIDNum2">护照号码不合格</string>
+    <string name="notTime">请选择日期</string>
+    <string name="notNationality">请选择国籍</string>
+    <string name="notEnglishName">请输入完整英文名</string>
+    <string name="notRightTime">证件有效期必须晚于当前日期</string>
+    <string name="notRightTime2">出生日期必须早于当前日期</string>
+
+    <string name="notAddressName">请输入收件人姓名</string>
+    <string name="notAddress">请选择所在地区</string>
+    <string name="notDetailAddress">请输入详细地址</string>
+
+    <!-- 微信 -->
+    <string name="sc_login_failed">授权失败</string>
+    <string name="sc_login_success">授权成功</string>
+    <string name="sc_getuserinfo_failed">获取用户信息失败</string>
+    <string name="sc_auth_denied">未通过审核</string>
+    <string name="sc_login_cancel">取消授权</string>
+    <string name="sc_download_wx">当前未安装微信或安装的微信版本不支持登录，建议安装最新版微信后重试。</string>
+    <string name="sc_not_support_pay">当前版本暂不支持微信支付</string>
+    <string name="attach_short_cut_message">常用语</string>
+    <string name="is_operating">操作中...</string>
+    <string name="sc_pay_result_cancel_pay">取消支付</string>
+    <string name="pay_failure">支付失败</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pending">待处理</string>
+    <string name="pay_cancel">支付取消</string>
+    <string name="editIng">编辑中</string>
+</resources>

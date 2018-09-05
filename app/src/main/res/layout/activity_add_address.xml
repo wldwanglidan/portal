@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_toolbar"/>
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="收件人"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetName"
+            android:hint="请输入收件人姓名"
+            style="@style/nameCetStyle"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="手机号码"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetMobile"
+            android:hint="请输入手机号"
+            style="@style/mobileCetStyle"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/FatLine"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        style="@style/PllStyle"
+        android:id="@+id/llSelectProvince">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="所在地区"
+            style="@style/leftTVStyle"/>
+
+        <TextView
+            android:id="@+id/tvProvince"
+            android:hint="请选择"
+            style="@style/ChooseTvStyle"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="详细地址"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:imeOptions="actionNext"
+            android:hint="请填写详细地址，不少于5个字"
+            android:maxLines="1"
+            android:textColor="@color/textTitleColor"
+            android:textColorHint="@color/textGrayColor"
+            android:textSize="@dimen/personal_center_textSize"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout style="@style/PllStyle">
+
+        <TextView
+            app:layout_widthPercent="32%"
+            android:text="邮编"
+            style="@style/leftTVStyle"/>
+
+        <com.tempus.portal.view.widget.ClearEditText
+            android:id="@+id/cetZipCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="6"
+            android:hint="选填项"
+            android:maxLines="1"
+            android:textColor="@color/textTitleColor"
+            android:textColorHint="@color/textGrayColor"
+            android:textSize="@dimen/personal_center_textSize"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View style="@style/ThinLine"></View>
+
+    <RelativeLayout style="@style/bottomRlStyle">
+
+        <TextView
+            android:id="@+id/tvContactDefault"
+            android:text="设为本人信息"
+            style="@style/bottomTvStyle"/>
+
+        <CheckBox
+            android:id="@+id/cbDefault"
+            android:layout_toLeftOf="@id/tvContactDefault"
+            style="@style/bottomCbStyle"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

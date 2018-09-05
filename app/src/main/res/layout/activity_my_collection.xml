@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_header"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:clipToPadding="false"/>
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_footer"/>
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+    <Button
+        android:id="@+id/btnCancelCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
+        android:textColor="@color/White"
+        android:background="@color/textRedColor"
+        android:textSize="@dimen/big_small_text"
+        android:text="取消收藏"/>
+</LinearLayout>

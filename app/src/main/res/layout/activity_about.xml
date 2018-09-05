@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:gravity="center|top">
+
+    <include
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/line5"/>
+
+    <ImageView
+        android:id="@+id/ivUserHead"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/ic_logo"/>
+
+    <TextView
+        android:id="@+id/tvIntroduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center|left"
+        android:drawableRight="@drawable/ic_more"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="我们简介"
+        android:textColor="@color/textTitleColor"
+        android:textSize="@dimen/small_text"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:id="@+id/tvFeedBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center|left"
+        android:drawableRight="@drawable/ic_more"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="意见反馈"
+        android:textColor="@color/textTitleColor"
+        android:textSize="@dimen/small_text"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:id="@+id/tvCheckUpdates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center|left"
+        android:drawableRight="@drawable/ic_more"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="检查更新"
+        android:textColor="@color/textTitleColor"
+        android:textSize="@dimen/small_text"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:id="@+id/tvSystemSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center|left"
+        android:drawableRight="@drawable/ic_more"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="系统设置"
+        android:textColor="@color/textTitleColor"
+        android:textSize="@dimen/small_text"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:id="@+id/tvAgreementStatement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center|left"
+        android:drawableRight="@drawable/ic_more"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="协议声明"
+        android:textColor="@color/textTitleColor"
+        android:textSize="@dimen/small_text"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:layout_weight="1"
+        android:text="腾邦集团 版权所有"
+        android:textColor="@color/textDarkGrayColor"
+        android:textSize="@dimen/micro_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="©2017 Tempus Group Co., Ltd. All rights reserved."
+        android:textColor="@color/textDarkGrayColor"
+        android:textSize="@dimen/bitty_text"/>
+</LinearLayout>

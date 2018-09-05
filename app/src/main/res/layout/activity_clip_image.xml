@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/personalCenterBg">
+    <include
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--圆形裁剪框示例
+       app:clipBorderWidth="5dp"     ： 裁剪框边框宽度
+       app:clipType="circle"         ： 裁剪框类型为圆形
+       app:mHorizontalPadding="30dp" ：裁剪框距离左右边距为30dp
+    -->
+    <com.tempus.portal.view.ClipViewLayout
+        android:id="@+id/clipViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:clipBorderWidth="2dp"
+        app:clipType="circle"
+        app:mHorizontalPadding="30dp" />
+    </LinearLayout>

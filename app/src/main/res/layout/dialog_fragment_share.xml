@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/ibClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/ibt_share_close"
+        android:background="@null"
+        android:layout_gravity="right"/>
+    <!--app:cardUseCompatPadding="true"-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_share"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="分享到"
+            android:textColor="@color/textTitleColor"
+            android:textSize="@dimen/big_small_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="1px"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvShareWx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="微信好友"
+                android:drawableTop="@drawable/ic_wechat_friends"
+                android:drawablePadding="10dp"
+                android:textColor="@color/textGrayColor"
+                android:textSize="@dimen/micro_text"/>
+
+            <TextView
+                android:id="@+id/tvShareFriendsCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:drawableTop="@drawable/ic_friends_circle"
+                android:drawablePadding="10dp"
+                android:textColor="@color/textGrayColor"
+                android:textSize="@dimen/micro_text"/>
+
+            <TextView
+                android:id="@+id/tvQq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="QQ好友"
+                android:drawableTop="@drawable/ic_qq"
+                android:drawablePadding="10dp"
+                android:textColor="@color/textGrayColor"
+                android:textSize="@dimen/micro_text"/>
+
+            <TextView
+                android:id="@+id/tvShareQqZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="QQ空间"
+                android:drawableTop="@drawable/ic_qq_zone"
+                android:drawablePadding="10dp"
+                android:textColor="@color/textGrayColor"
+                android:textSize="@dimen/micro_text"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/base_bg">
+
+    <include
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/small_text"
+        android:lineSpacingExtra="5dp"
+        android:padding="15dp"
+        android:text="腾邦生活APP是由腾邦集团旗下的深圳腾邦智慧科技有限公司开发和运营的，将腾邦集团旗下的产品或服务信息整合在一起，为用户提供一个预订旅游产品、机票产品、金融产品和电商产品的综合性平台。\n腾邦生活APP还将用户在腾邦集团各个频道所积累的积分整合在一起，让用户的积分更有价值，为用户提供更多的增值服务。
+"
+        android:background="@color/White"/>
+
+</LinearLayout>

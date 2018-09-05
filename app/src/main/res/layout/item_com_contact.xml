@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_15"
+    android:paddingRight="@dimen/dp_15"
+    android:paddingBottom="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/personal_center_textSize"
+            android:textColor="@color/textContentColor"
+            android:text="张琪"
+            />
+        <ImageButton
+            android:id="@+id/ibDelete"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_delete"
+            />
+        <ImageButton
+            android:id="@+id/ibEdit"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/ic_edit"
+            android:layout_toLeftOf="@id/ibDelete"
+            android:layout_marginRight="@dimen/dp_30"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/personal_center_textSize"
+        android:textColor="@color/textContentColor"
+        android:text="134 5678 8764"
+        />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/micro_text"
+        android:textColor="@color/textContentColor"
+        android:text="aniya  cummerata@swaniocdjkd.tv"
+        />
+
+</LinearLayout>

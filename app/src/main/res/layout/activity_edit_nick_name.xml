@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/personalCenterBg">
+
+    <include
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.tempus.portal.view.widget.ClearEditText
+        android:id="@+id/edtNickName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:background="@color/White"
+        android:imeOptions="actionDone"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:textColor="@color/textNickNameColor"
+        android:textColorHint="@color/textGrayColor"
+        android:textSize="@dimen/small_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:textColor="@color/textContentColor"
+        android:textSize="@dimen/micro_text"
+        android:text="昵称为数字,字母或汉字的组合（6-12个字符）"
+        />
+
+
+</LinearLayout>

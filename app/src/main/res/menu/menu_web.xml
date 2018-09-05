@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_pop"
+        android:orderInCategory="100"
+        android:layout_marginRight="@dimen/dp_5"
+        android:icon="@drawable/ic_share_point"
+        app:showAsAction="always"/>
+
+</menu>
